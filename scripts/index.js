@@ -22,7 +22,7 @@ function playRound(player, computer){
             case "paper":
                 return `You win! ${player} beats ${computer}.`;
             case "scissors":
-                return `You Lose! ${player} is inferior to ${computer}.`;
+                return `You lose! ${player} is inferior to ${computer}.`;
             default:
                 return `It's a tie! ${player} can't beat ${computer}.`;
         }
@@ -32,7 +32,7 @@ function playRound(player, computer){
             case "scissors":
                 return `You win! ${player} beats ${computer}.`;
             case "rock":
-                return `You Lose! ${player} is inferior to ${computer}.`;
+                return `You lose! ${player} is inferior to ${computer}.`;
             default:
                 return `It's a tie! ${player} can't beat ${computer}.`;
         }
@@ -42,7 +42,7 @@ function playRound(player, computer){
             case "rock":
                 return `You win! ${player} beats ${computer}.`;
             case "paper":
-                return `You Lose! ${player} is inferior to ${computer}.`;
+                return `You lose! ${player} is inferior to ${computer}.`;
             default:
                 return `It's a tie! ${player} can't beat ${computer}.`;
         }
@@ -50,8 +50,27 @@ function playRound(player, computer){
 }
 
 function game(){
+    let playerScore = 0;
+    let computerScore = 0;
+    let result;
     for(let i = 0; i < 5; i++){
-        console.log(playRound(playerSelection,computerSelection));
+        result = playRound(playerSelection,computerSelection);
+        if(result.startsWith("You win!")){
+            playerScore++;
+        }
+        else if(result.startsWith("You lose!")){
+            computerScore++;
+        }
+        console.log(`Player score: ${playerScore} | Computer score: ${computerScore}`);
+    }
+    if(playerScore > computerScore){
+        console.log("You won the best of 5");
+    }
+    else if(computerScore > playerScore){
+        console.log("You lost the best of 5");
+    }
+    else{
+        console.log("This best of 5 was a tie!");
     }
 }
 
