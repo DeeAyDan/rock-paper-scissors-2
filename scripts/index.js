@@ -13,10 +13,11 @@ function getComputerChoice(){
 }
 
 const computerSelection = getComputerChoice();
-const playerSelection = "rOcK".toLowerCase();
+const playerSelection = "rock";
 
 function playRound(player, computer){
     computer = getComputerChoice();
+    player = prompt("What will you play this round?");
     if(computer === "rock"){
         switch(player){
             case "paper":
@@ -55,6 +56,7 @@ function game(){
     let result;
     for(let i = 0; i < 5; i++){
         result = playRound(playerSelection,computerSelection);
+        console.log(result);
         if(result.startsWith("You win!")){
             playerScore++;
         }
