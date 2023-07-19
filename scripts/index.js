@@ -13,48 +13,38 @@ function getComputerChoice(){
 }
 
 const computerSelection = getComputerChoice();
-const playerSelection = "rock";
+const playerSelection = "rOcK".toLowerCase();
 
 function playRound(player, computer){
     if(computer === "rock"){
         switch(player){
             case "paper":
-                console.log(`You win! ${player} beats ${computer}.`);
-                break;
+                return `You win! ${player} beats ${computer}.`;
             case "scissors":
-                console.log(`You Lose! ${player} is inferior to ${computer}.`);
-                break;
+                return `You Lose! ${player} is inferior to ${computer}.`;
             default:
-                console.log(`It's a tie! ${player} can't beat ${computer}.`);
+                return `It's a tie! ${player} can't beat ${computer}.`;
         }
     }
     else if(computer === "paper"){
         switch(player){
             case "scissors":
-                console.log(`You win! ${player} beats ${computer}.`);
-                break;
+                return `You win! ${player} beats ${computer}.`;
             case "rock":
-                console.log(`You Lose! ${player} is inferior to ${computer}.`);
-                break;
+                return `You Lose! ${player} is inferior to ${computer}.`;
             default:
-                console.log(`It's a tie! ${player} can't beat ${computer}.`);
+                return `It's a tie! ${player} can't beat ${computer}.`;
         }
     }
     else if(computer === "scissors"){
         switch(player){
             case "rock":
-                console.log(`You win! ${player} beats ${computer}.`);
-                break;
+                return `You win! ${player} beats ${computer}.`;
             case "paper":
-                console.log(`You Lose! ${player} is inferior to ${computer}.`);
-                break;
+                return `You Lose! ${player} is inferior to ${computer}.`;
             default:
-                console.log(`It's a tie! ${player} can't beat ${computer}.`);
+                return `It's a tie! ${player} can't beat ${computer}.`;
         }
     }
-
-    console.log(`Player: ${player}`);
-    console.log(`CPU: ${computer}`);
 }
-
-playRound(playerSelection,computerSelection);
+console.log(playRound(playerSelection,computerSelection));
