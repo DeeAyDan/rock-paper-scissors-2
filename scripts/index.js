@@ -16,6 +16,7 @@ const computerSelection = getComputerChoice();
 const playerSelection = "rOcK".toLowerCase();
 
 function playRound(player, computer){
+    computer = getComputerChoice();
     if(computer === "rock"){
         switch(player){
             case "paper":
@@ -47,4 +48,11 @@ function playRound(player, computer){
         }
     }
 }
-console.log(playRound(playerSelection,computerSelection));
+
+function game(){
+    for(let i = 0; i < 5; i++){
+        console.log(playRound(playerSelection,computerSelection));
+    }
+}
+
+game();
