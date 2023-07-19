@@ -16,10 +16,7 @@ const computerSelection = getComputerChoice();
 const playerSelection = "rock";
 
 function playRound(player, computer){
-    if(player === computer){
-        console.log(`It's a tie! ${player} can't beat ${computer}.`);
-    }
-    else if(computer === "rock"){
+    if(computer === "rock"){
         switch(player){
             case "paper":
                 console.log(`You win! ${player} beats ${computer}.`);
@@ -27,6 +24,8 @@ function playRound(player, computer){
             case "scissors":
                 console.log(`You Lose! ${player} is inferior to ${computer}.`);
                 break;
+            default:
+                console.log(`It's a tie! ${player} can't beat ${computer}.`);
         }
     }
     else if(computer === "paper"){
@@ -37,6 +36,8 @@ function playRound(player, computer){
             case "rock":
                 console.log(`You Lose! ${player} is inferior to ${computer}.`);
                 break;
+            default:
+                console.log(`It's a tie! ${player} can't beat ${computer}.`);
         }
     }
     else if(computer === "scissors"){
@@ -47,6 +48,8 @@ function playRound(player, computer){
             case "paper":
                 console.log(`You Lose! ${player} is inferior to ${computer}.`);
                 break;
+            default:
+                console.log(`It's a tie! ${player} can't beat ${computer}.`);
         }
     }
 
