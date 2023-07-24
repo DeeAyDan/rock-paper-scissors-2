@@ -4,9 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="scripts/index.js"></script>
+    <link rel="stylesheet" href="styles/page_layout.css">
+    <link rel="stylesheet" href="styles/playing-field-layout.css">
+    <link rel="stylesheet" href="styles/boxes.css">
+    <script src="scripts/index.js" defer></script>
 </head>
 <body>
-    
+    <div id="page-container">
+        <div id="page-header"><h1>Rock Paper Scissors</h1></div>
+        <div id="page-body">
+            <div id="body-header">
+                <h2>Player</h2>
+                <div id="score">0-0</div>
+                <h2>Computer</h2>
+            </div>
+            <div id="body-main">
+                <div class="body-main-field">
+                    <div class="player-choice-box"></div>
+                    <div class="player-choice-box"></div>
+                    <div class="player-choice-box"></div>
+                </div>
+                <div class="body-main-field">
+                    <div id="winner-box"></div>
+                </div>
+                <div class="body-main-field">
+                    <div id="computer-choice-box"></div>
+                    <div id="restart-box"></div>
+                </div>
+            </div>
+        </div>
+        <div id="page-footer"></div>
+    </div>
 </body>
 </html>

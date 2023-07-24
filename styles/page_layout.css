@@ -1,0 +1,35 @@
+body{
+    margin:0px;
+}
+
+*{
+    border: solid red 1px;
+}
+
+#page-container{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #111827;
+    align-items: center;
+}
+
+#page-header{
+    min-height:10vh;
+    width: 100%;
+    text-align: center;
+}
+
+#page-body{
+    flex: 1;
+    background-color: #1f2937;
+    width: 850px;
+    display: flex;
+    flex-direction: column;
+}
+
+#page-footer{
+    min-height: 10vh;
+    background-color: black;
+    width: 100%;
+}

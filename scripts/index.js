@@ -50,7 +50,7 @@ function playRound(player, computer){
     }
 }
 
-function game(){
+/*function game(){
     let playerScore = 0;
     let computerScore = 0;
     let result;
@@ -74,6 +74,4 @@ function game(){
     else{
         console.log("This best of 5 was a tie!");
     }
-}
-
-game();
+}*/
