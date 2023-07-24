@@ -5,3 +5,7 @@
 .text{
     color: #c3c7cd;
 }
+
+#score{
+    font-size: 36px;
+}
