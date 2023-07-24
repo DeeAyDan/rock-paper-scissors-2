@@ -24,5 +24,11 @@
 }
 
 #winner-box{
+    
+}
+
+#result-message{
+    margin-top: 10px;
     margin-bottom: auto;
+    text-align: center;
 }

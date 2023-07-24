@@ -13,11 +13,28 @@ function getComputerChoice(){
 }
 
 const computerSelection = getComputerChoice();
-const playerSelection = "rock";
+let playerSelection = "";
+
+let playerScore = 0;
+let computerScore = 0;
+
+function setPlayerToRock(){
+    playerSelection = "rock";
+    game();
+}
+
+function setPlayerToPaper(){
+    playerSelection = "paper";
+    game();
+}
+
+function setPlayerToScissors(){
+    playerSelection = "scissors";
+    game();
+}
 
 function playRound(player, computer){
     computer = getComputerChoice();
-    player = prompt("What will you play this round?");
     if(computer === "rock"){
         switch(player){
             case "paper":
@@ -50,28 +67,18 @@ function playRound(player, computer){
     }
 }
 
-/*function game(){
-    let playerScore = 0;
-    let computerScore = 0;
+function game(){
     let result;
-    for(let i = 0; i < 5; i++){
-        result = playRound(playerSelection,computerSelection);
-        console.log(result);
-        if(result.startsWith("You win!")){
-            playerScore++;
-        }
-        else if(result.startsWith("You lose!")){
-            computerScore++;
-        }
-        console.log(`Player score: ${playerScore} | Computer score: ${computerScore}`);
+    result = playRound(playerSelection,computerSelection);
+    
+    console.log(result);
+
+    if(result.startsWith("You win!")){
+        playerScore++;
     }
-    if(playerScore > computerScore){
-        console.log("You won the best of 5");
+    else if(result.startsWith("You lose!")){
+        computerScore++;
     }
-    else if(computerScore > playerScore){
-        console.log("You lost the best of 5");
-    }
-    else{
-        console.log("This best of 5 was a tie!");
-    }
-}*/
+    
+    let 
+}

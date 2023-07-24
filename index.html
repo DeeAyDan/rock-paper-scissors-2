@@ -20,13 +20,14 @@
             </div>
             <div id="body-main">
                 <div class="body-main-field">
-                    <img class="player-choice-box" src="resources/rock.png" alt="Player Rock">
-                    <img class="player-choice-box" src="resources/paper.png" alt="Player Paper">
-                    <img class="player-choice-box" src="resources/scissors.png" alt="Player Scissors">
+                    <img class="player-choice-box" src="resources/rock.png" alt="Player Rock" onclick="setPlayerToRock()">
+                    <img class="player-choice-box" src="resources/paper.png" alt="Player Paper" onclick="setPlayerToPaper()">
+                    <img class="player-choice-box" src="resources/scissors.png" alt="Player Scissors" onclick="setPlayerToScissors()">
                 </div>
                 <div class="body-main-field">
                     <div class="text" id="score">0 - 0</div>
                     <div id="winner-box"><img src="" alt="Winner goes here"></div>
+                    <div class="text" id="result-message">Message after round goes here buh buh buh</div>
                 </div>
                 <div class="body-main-field">
                     <img id="computer-choice-box" src="resources/robot.png" art="Comuter Selection Box">
