@@ -107,6 +107,8 @@ function restartGame(){
     robotImage.src = `resources/robot.png`;
     const winnerImage = document.querySelector("#winner-image");
     winnerImage.src = "";
+    const robotText = document.querySelector(`#computer-pick-text`);
+    robotText.textContent = ``;
 }
 function changeWinner(input){
     const winnerImage = document.querySelector("#winner-image");
@@ -126,4 +128,6 @@ function changeWinner(input){
 function changeRobotImage(newSource){
     const robotImage = document.querySelector(`#computer-choice-box`);
     robotImage.src = `resources/${newSource}.png`;
+    const robotText = document.querySelector(`#computer-pick-text`);
+    robotText.textContent = `Robot picks ${newSource}.`
 }
