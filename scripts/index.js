@@ -71,12 +71,7 @@ function game(){
     else{
         let result = playRound(playerSelection,computerSelection);
         console.log(result);
-        if(result.startsWith("You win!")){
-            playerScore++;
-        }
-        else if(result.startsWith("You lose!")){
-            computerScore++;
-        }
+        changeWinner(result);
         updateScore(result);
     }
 }
@@ -106,4 +101,18 @@ function restartGame(){
     scoreBox.textContent = `${playerScore} - ${computerScore}`;
     const scoreMessage = document.querySelector("#result-message");
     scoreMessage.textContent = `Game has been restarted!`;
+}
+function changeWinner(input){
+    const winnerImage = document.querySelector("#winner-image");
+    if(input.startsWith("You win!")){
+        playerScore++;
+        winnerImage.src = "resources/player.png";
+    }
+    else if(input.startsWith("You lose!")){
+        computerScore++;
+        winnerImage.src = "resources/robot.png";
+    }
+    else{
+        winnerImage.src = "resources/tie.png";
+    }
 }
