@@ -11,7 +11,6 @@ function getComputerChoice(){
         return "scissors";
     }
 }
-
 const computerSelection = getComputerChoice();
 let playerSelection = "";
 
@@ -22,17 +21,14 @@ function setPlayerToRock(){
     playerSelection = "rock";
     game();
 }
-
 function setPlayerToPaper(){
     playerSelection = "paper";
     game();
 }
-
 function setPlayerToScissors(){
     playerSelection = "scissors";
     game();
 }
-
 function playRound(player, computer){
     computer = getComputerChoice();
     if(computer === "rock"){
@@ -70,15 +66,29 @@ function playRound(player, computer){
 function game(){
     let result;
     result = playRound(playerSelection,computerSelection);
-    
     console.log(result);
-
     if(result.startsWith("You win!")){
         playerScore++;
     }
     else if(result.startsWith("You lose!")){
         computerScore++;
     }
-    
-    let 
+    updateScore(result);
+}
+
+function updateScore(resultMessage){
+    const scoreBox = document.querySelector("#score");
+    const scoreMessage = document.querySelector("#result-message");
+    if(playerScore >= 5){
+        scoreBox.textContent = `${playerScore} - ${computerScore}`;
+        scoreMessage.textContent = `You did it. You won against the computer.`;
+    }
+    else if(computerScore >= 5){
+        scoreBox.textContent = `${playerScore} - ${computerScore}`;
+        scoreMessage.textContent = `You lost against the "AI". Good luck next time.`;
+    }
+    else{
+        scoreBox.textContent = `${playerScore} - ${computerScore}`;
+        scoreMessage.textContent = resultMessage;
+    }
 }
