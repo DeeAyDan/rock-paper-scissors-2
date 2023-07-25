@@ -11,7 +11,7 @@ function getComputerChoice(){
         return "scissors";
     }
 }
-const computerSelection = getComputerChoice();
+const computerSelection = "";
 let playerSelection = "";
 let gameLocked = false;
 
@@ -32,6 +32,7 @@ function setPlayerToScissors(){
 }
 function playRound(player, computer){
     computer = getComputerChoice();
+    changeRobotImage(computer);
     if(computer === "rock"){
         switch(player){
             case "paper":
@@ -104,6 +105,7 @@ function restartGame(){
 }
 function changeWinner(input){
     const winnerImage = document.querySelector("#winner-image");
+    
     if(input.startsWith("You win!")){
         playerScore++;
         winnerImage.src = "resources/player.png";
@@ -115,4 +117,8 @@ function changeWinner(input){
     else{
         winnerImage.src = "resources/tie.png";
     }
+}
+function changeRobotImage(newSource){
+    const robotImage = document.querySelector(`#computer-choice-box`);
+    robotImage.src = `resources/${newSource}.png`;
 }
