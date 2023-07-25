@@ -4,6 +4,13 @@
     width: 150px;
 }
 
+.player-choice-box:hover{
+    border: green solid 3px;
+    border-radius: 10px;
+    transform: scale(1.2);
+    transition-duration: 75ms;
+}
+
 #winner-box{
     height: 200px;
     width: 200px;
@@ -12,6 +19,12 @@
 #restart-box{
     height: 150px;
     width: 150px;
+}
+
+#restart-box:hover{
+    border: red solid 3px;
+    border-radius: 10px;
+    transition-duration: 75ms;
 }
 
 #computer-choice-box{

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Rock Paper Scissors</title>
     <link rel="stylesheet" href="styles/page_layout.css">
     <link rel="stylesheet" href="styles/playing-field-layout.css">
     <link rel="stylesheet" href="styles/boxes.css">
@@ -20,19 +20,19 @@
             </div>
             <div id="body-main">
                 <div class="body-main-field">
-                    <img class="player-choice-box" src="resources/rock.png" alt="Player Rock" onclick="setPlayerToRock()">
-                    <img class="player-choice-box" src="resources/paper.png" alt="Player Paper" onclick="setPlayerToPaper()">
-                    <img class="player-choice-box" src="resources/scissors.png" alt="Player Scissors" onclick="setPlayerToScissors()">
+                    <img class="player-choice-box" src="resources/rock.png" alt="Player Rock" onclick="setPlayerToRock()" draggable="false">
+                    <img class="player-choice-box" src="resources/paper.png" alt="Player Paper" onclick="setPlayerToPaper()" draggable="false">
+                    <img class="player-choice-box" src="resources/scissors.png" alt="Player Scissors" onclick="setPlayerToScissors()" draggable="false">
                 </div>
                 <div class="body-main-field">
                     <div class="text" id="score">0 - 0</div>
-                    <div id="winner-box"><img src="resources/rps.png" alt="Winner goes here" id="winner-image"></div>
+                    <div id="winner-box"><img src="resources/rps.png" alt="Winner goes here" id="winner-image" draggable="false"></div>
                     <div class="text" id="result-message">Pick your weapon from the left</div>
-                    <img id="restart-box" src="resources/replay.png" alt="Restart Button" onclick="restartGame()">
+                    <img id="restart-box" src="resources/replay.png" alt="Restart Button" onclick="restartGame()" draggable="false">
                 </div>
                 <div class="body-main-field">
                     <p class="text" id="computer-pick-text"></p>
-                    <img id="computer-choice-box" src="resources/robot.png" art="Comuter Selection Box">
+                    <img id="computer-choice-box" src="resources/robot.png" art="Comuter Selection Box" draggable="false">
                     
                 </div>
             </div>
