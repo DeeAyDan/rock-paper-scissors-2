@@ -98,10 +98,15 @@ function restartGame(){
     gameLocked = false;
     playerScore = 0;
     computerScore = 0;
+
     const scoreBox = document.querySelector("#score");
     scoreBox.textContent = `${playerScore} - ${computerScore}`;
     const scoreMessage = document.querySelector("#result-message");
     scoreMessage.textContent = `Game has been restarted!`;
+    const robotImage = document.querySelector(`#computer-choice-box`);
+    robotImage.src = `resources/robot.png`;
+    const winnerImage = document.querySelector("#winner-image");
+    winnerImage.src = "";
 }
 function changeWinner(input){
     const winnerImage = document.querySelector("#winner-image");
