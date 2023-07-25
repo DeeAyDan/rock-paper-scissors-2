@@ -2,10 +2,6 @@ body{
     margin:0px;
 }
 
-*{
-    border: solid red 1px;
-}
-
 #page-container{
     display: flex;
     flex-direction: column;
@@ -26,10 +22,11 @@ body{
     width: 850px;
     display: flex;
     flex-direction: column;
+    margin-bottom: 22px;
 }
 
 #page-footer{
-    min-height: 10vh;
+    min-height: 8vh;
     background-color: black;
     width: 100%;
 }

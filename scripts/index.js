@@ -40,7 +40,7 @@ function playRound(player, computer){
             case "scissors":
                 return `You lose! ${player} is inferior to ${computer}.`;
             default:
-                return `It's a tie! ${player} can't beat ${computer}.`;
+                return `It's a tie!`;
         }
     }
     else if(computer === "paper"){
@@ -50,7 +50,7 @@ function playRound(player, computer){
             case "rock":
                 return `You lose! ${player} is inferior to ${computer}.`;
             default:
-                return `It's a tie! ${player} can't beat ${computer}.`;
+                return `It's a tie!`;
         }
     }
     else if(computer === "scissors"){
@@ -60,7 +60,7 @@ function playRound(player, computer){
             case "paper":
                 return `You lose! ${player} is inferior to ${computer}.`;
             default:
-                return `It's a tie! ${player} can't beat ${computer}.`;
+                return `It's a tie!`;
         }
     }
 }
@@ -106,7 +106,7 @@ function restartGame(){
     const robotImage = document.querySelector(`#computer-choice-box`);
     robotImage.src = `resources/robot.png`;
     const winnerImage = document.querySelector("#winner-image");
-    winnerImage.src = "";
+    winnerImage.src = "resources/rps.png";
     const robotText = document.querySelector(`#computer-pick-text`);
     robotText.textContent = ``;
 }
