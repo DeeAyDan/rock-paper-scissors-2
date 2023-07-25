@@ -13,6 +13,7 @@ function getComputerChoice(){
 }
 const computerSelection = getComputerChoice();
 let playerSelection = "";
+let gameLocked = false;
 
 let playerScore = 0;
 let computerScore = 0;
@@ -62,33 +63,47 @@ function playRound(player, computer){
         }
     }
 }
-
 function game(){
-    let result;
-    result = playRound(playerSelection,computerSelection);
-    console.log(result);
-    if(result.startsWith("You win!")){
-        playerScore++;
-    }
-    else if(result.startsWith("You lose!")){
-        computerScore++;
-    }
-    updateScore(result);
-}
 
+    if(gameLocked){
+        alert("You need to restart the game to play.");
+    }
+    else{
+        let result = playRound(playerSelection,computerSelection);
+        console.log(result);
+        if(result.startsWith("You win!")){
+            playerScore++;
+        }
+        else if(result.startsWith("You lose!")){
+            computerScore++;
+        }
+        updateScore(result);
+    }
+}
 function updateScore(resultMessage){
     const scoreBox = document.querySelector("#score");
     const scoreMessage = document.querySelector("#result-message");
     if(playerScore >= 5){
         scoreBox.textContent = `${playerScore} - ${computerScore}`;
         scoreMessage.textContent = `You did it. You won against the computer.`;
+        gameLocked = true;
     }
     else if(computerScore >= 5){
         scoreBox.textContent = `${playerScore} - ${computerScore}`;
         scoreMessage.textContent = `You lost against the "AI". Good luck next time.`;
+        gameLocked = true;
     }
     else{
         scoreBox.textContent = `${playerScore} - ${computerScore}`;
         scoreMessage.textContent = resultMessage;
     }
+}
+function restartGame(){
+    gameLocked = false;
+    playerScore = 0;
+    computerScore = 0;
+    const scoreBox = document.querySelector("#score");
+    scoreBox.textContent = `${playerScore} - ${computerScore}`;
+    const scoreMessage = document.querySelector("#result-message");
+    scoreMessage.textContent = `Game has been restarted!`;
 }
